@@ -49,7 +49,7 @@ def send(cellphone):
       body=dumps({"phone": f'+880{cellphone}'}).encode())
 
 def spam(args):
-    if (search(r'9\d{9}$', args.cellphone)):
+    if (search(r'1\d{1}$', args.cellphone)):
         for time in range(args.times):
             print(f"\rSending sms {time+1}/{args.times}", end='')
             try:
@@ -59,7 +59,7 @@ def spam(args):
             sleep(2)
         print('')
     else:
-        print("error: invalid cellphone format, format: 9\d{9} e.g. 90157xxxx")
+        print("error: invalid cellphone format, format: 1\d{1} e.g. 90157xxxx")
 
 def main():
     parser = ArgumentParser(prog="asmsb",
